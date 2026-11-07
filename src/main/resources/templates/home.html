@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accueil sécurisé | Spring Security</title><link rel="stylesheet" th:href="@{/css/style.css}"></head>
+<body><main><h1>Accueil sécurisé</h1><p>Connexion réussie ! Choisissez votre espace.</p><p class="success" th:if="${param.logout}">Vous avez été déconnecté avec succès.</p><nav><a th:href="@{/}">Accueil</a><a th:href="@{/user/dashboard}">Espace utilisateur</a><a th:href="@{/admin/dashboard}">Espace administrateur</a></nav><form th:action="@{/logout}" method="post"><button type="submit">Se déconnecter</button></form></main></body>
+</html>
+
